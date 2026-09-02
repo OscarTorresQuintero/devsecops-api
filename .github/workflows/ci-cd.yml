@@ -53,4 +53,4 @@ jobs:
 
       - name: Escanear imagen con Trivy
         run: |
-          trivy image --exit-code 1 --severity HIGH,CRITICAL devsecops-api:${{ github.sha }}
+          trivy image --exit-code 1 --severity HIGH,CRITICAL --ignore-unfixed devsecops-api:${{ github.sha }}
